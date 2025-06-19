@@ -70,7 +70,17 @@ This is a fullstack web application with a **FastAPI** backend and a **React** f
     ```
 
 ---
+### API Keys required 
 
+1. **An env.example file is present in backend**
+
+    ```bash
+    cd backend
+    ```
+2. **Generate API Key from AI Studio by Google**
+3. **Add API Key for Gemini from Google AI Sudio (Free)**
+
+---
 ## 📝 Notes
 
 * Assumption: Ports 3000 (React) and 8000 (FastAPI) are not in use.
