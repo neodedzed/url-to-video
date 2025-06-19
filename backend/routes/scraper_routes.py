@@ -32,4 +32,4 @@ def post_url_for_scraping(urlData: ScrapeUrl):
         text_overlay=scripts[0]
         )
 
-    return ProductPath(product=product_name) 
+    return ProductPath(product=product_name, script=scripts[0]) 

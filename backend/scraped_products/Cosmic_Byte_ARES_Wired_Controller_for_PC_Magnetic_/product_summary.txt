@@ -1,0 +1,29 @@
+Product Information Summary
+==================================================
+Scraped on: 2025-06-19 21:44:07
+Source URL: https://www.amazon.in/Cosmic-Byte-ARES-Wired-White/dp/B0BYKBGXPW/
+
+TITLE:
+--------------------
+Cosmic Byte ARES Wired Controller for PC, Magnetic Triggers, Accurate Joysticks, Dual Vibration, Backit LED Buttons (White)
+
+PRICE:
+--------------------
+1,149.
+
+RATING:
+--------------------
+4.3
+
+AVAILABILITY:
+--------------------
+In stock
+
+FEATURES:
+--------------------
+1. Ergonomic Design and Rubbersied Textured Sticks for enhanced Grip
+2. Pressure Sensitive Analog Triggers and LED Backlit Buttons. Supports Xinput and D Input
+3. Vibration Feature and Zero Lag connection using USB cable
+4. Turbo and Auto Turbo Buttons for on the fly customizations
+5. 1.8 meter USB cable so comfortablly sit on the couch to game
+

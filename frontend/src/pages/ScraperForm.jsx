@@ -1,4 +1,5 @@
 import { useState } from "react"
+import '../styles/login.css'
 import { scrapeUrl } from "../api/scraperApi"
 import { useNavigate } from "react-router-dom"
 
@@ -28,9 +29,11 @@ function ScraperForm() {
     
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <h2>Ad Generator</h2>
+            <form onSubmit={handleSubmit} className='form'>
                 <input 
                 type='text'
+                placeholder="URL to be scraped"
                 name='urlToBeScraped'
                 onChange={(e)=>(setUrlToBeScraped(e.target.value))}    
                 />
