@@ -214,18 +214,15 @@ class Scraper:
         return saved_files
 
 def save_product_data(product_info: Dict, url: str) -> str:
-    """
-    Save product information to organized files in a folder
-    """
     # Create folder name based on product title or timestamp
     title = product_info.get('title', 'Unknown Product')
     safe_title = re.sub(r'[^\w\s-]', '', title)[:50]  # Remove special chars, limit length
     safe_title = re.sub(r'[-\s]+', '_', safe_title)  # Replace spaces/dashes with underscores
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    folder_name = f"{safe_title}_{timestamp}" if safe_title else f"product_{timestamp}"
+    folder_name = f"{safe_title}" if safe_title else f"product_{timestamp}"
     
-    # Create main folder
+    # Create  folder
     base_folder = "scraped_products"
     product_folder = os.path.join(base_folder, folder_name)
     os.makedirs(product_folder, exist_ok=True)
