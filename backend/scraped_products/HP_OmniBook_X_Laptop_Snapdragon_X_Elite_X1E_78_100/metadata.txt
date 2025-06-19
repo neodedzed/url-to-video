@@ -1,0 +1,19 @@
+Scraping Metadata
+==============================
+Timestamp: 2025-06-19T22:19:08.103682
+Source URL: https://www.amazon.in/HP-OmniBook-Snapdragon%C2%AE-X1E-78-100-14-fe0121QU/dp/B0D84427H6
+Product Title: HP OmniBook X Laptop, Snapdragon® X Elite X1E-78-100,14inch(35.6 cm),2.2K Touch Display,IPS,16GB LPDDR5x,1TB SSD,Next Gen Windows, Copilot +,Blue,1.34 kg,14-fe0121QU
+Images Found: 4
+Features Count: 5
+
+Folder Structure:
+├── product_info.json (structured data)
+├── product_summary.txt (human-readable)
+├── metadata.txt (this file)
+└── images/ (downloaded product images)
+
+Actual Images Downloaded: 4
+  • image_01.jpg
+  • image_02.jpg
+  • image_03.jpg
+  • image_04.jpg

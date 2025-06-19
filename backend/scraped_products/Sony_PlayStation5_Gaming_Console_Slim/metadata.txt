@@ -1,0 +1,19 @@
+Scraping Metadata
+==============================
+Timestamp: 2025-06-19T22:20:37.602638
+Source URL: https://www.amazon.in/Sony-CFI-2008A01X-PlayStation%C2%AE5-Console-slim/dp/B0CY5HVDS2
+Product Title: Sony PlayStation5 Gaming Console (Slim)
+Images Found: 4
+Features Count: 5
+
+Folder Structure:
+├── product_info.json (structured data)
+├── product_summary.txt (human-readable)
+├── metadata.txt (this file)
+└── images/ (downloaded product images)
+
+Actual Images Downloaded: 4
+  • image_01.jpg
+  • image_02.jpg
+  • image_03.jpg
+  • image_04.jpg
