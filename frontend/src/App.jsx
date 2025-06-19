@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import ScraperForm from './pages/ScraperForm'
+import ProductVideo from './pages/ProductVideo'
 
 function App() {
   return (
     <>
-      <ScraperForm />
+      <Routes>
+        <Route path='/' element= {<ScraperForm />}/>
+        <Route path='/productVideo' element= {<ProductVideo />}/>
+      </Routes>
     </>
   )
 }
