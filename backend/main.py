@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes.scraper_routes import scraper_router
+from routes import scraper_routes, video_routes
 
 backend = FastAPI()
 
@@ -13,4 +13,5 @@ backend.add_middleware(
 
 )
 
-backend.include_router(scraper_router, prefix='/scraper')
+backend.include_router(scraper_routes.scraper_router, prefix='/scraper')
+backend.include_router(video_routes.video_router, prefix='/video')

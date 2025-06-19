@@ -1,7 +1,8 @@
-from moviepy import AudioFileClip, ImageClip, concatenate_videoclips
+from moviepy import AudioFileClip, ImageClip, TextClip, CompositeVideoClip, concatenate_videoclips
 from pathlib import Path
 
-def create_video(product_folder, audio_clip: AudioFileClip = None):
+def create_video(text_overlay: str ='Test', product_folder:str = None,audio_clip: AudioFileClip = None):
+    if not product_folder: product_folder = 'scraped_products/test'
     images = list(Path(f'./{product_folder}/images/').iterdir())
     
     duration = 3
@@ -13,6 +14,18 @@ def create_video(product_folder, audio_clip: AudioFileClip = None):
     clips = [ImageClip(img).with_duration(duration) for img in images]
 
     video = concatenate_videoclips(clips, method='compose')
+
+    text_clip = TextClip(
+        text=text_overlay, 
+        color='white',
+        bg_color='black', 
+        font_size=10,
+        vertical_align='bottom',
+        horizontal_align='center',
+        duration=video.duration,
+        method='label'
+        )
+    # text_clip = text_clip.with_position(('center', 'bottom')).with_duration(video.duration)
 
     video.write_videofile(f'./{product_folder}/output.mp4', fps=30)
 
@@ -31,3 +44,4 @@ def ken_burns_effect(image, zooom=1.1, duration=3):
     ).set_duration(duration)
 
     return animated
+

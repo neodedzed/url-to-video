@@ -19,14 +19,15 @@ def get_scripts_from_LLM(product_folder):
         
         #COnvert to Json
         cleaned_llm_response_json = json.loads(cleaned_llm_response)
-        # print(cleaned_llm_response_json)
-        # print(type(cleaned_llm_response_json))
+        print(cleaned_llm_response_json)
+        print(type(cleaned_llm_response_json))
+        print(list(cleaned_llm_response_json.values()))
 
     except Exception as e:
         print('Response not in json format', e)
     
     #The values are the scripts
-    return cleaned_llm_response_json.values()
+    return list(cleaned_llm_response_json.values())
 
 def get_LLM_response(product_folder):
 

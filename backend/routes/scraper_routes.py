@@ -27,6 +27,9 @@ def post_url_for_scraping(urlData: ScrapeUrl):
     print('Scripts generated')
 
     #Send to movie-stitching util
-    create_video(product_folder)
+    create_video(
+        product_folder=product_folder, 
+        text_overlay=scripts[0]
+        )
 
     return ProductPath(product=product_name) 
