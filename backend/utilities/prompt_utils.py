@@ -1,8 +1,28 @@
 import json
 import os
 from pathlib import Path
+import re
 from dotenv import load_dotenv
 from google import genai
+
+def get_scripts_from_LLM():
+
+    raw_llm_response = get_LLM_response()
+    print(raw_llm_response)
+    print('='*50)
+    try:
+        cleaned_llm_response_json=re.search(
+            r'(\{.*\})',
+            raw_llm_response, 
+            re.DOTALL
+            ).group(1)
+        print(cleaned_llm_response_json)
+
+    except Exception as e:
+        print('Response not in json format', e)
+    
+    #The values are the scripts
+    return cleaned_llm_response_json.values()
 
 def get_LLM_response():
 
@@ -14,8 +34,7 @@ def get_LLM_response():
         model='gemini-2.0-flash-lite',
         contents=prompt
     )
-    print('='*50)
-    print(response.text)
+    return response.text
     
 
 def generate_prompt(
@@ -36,9 +55,8 @@ def generate_prompt(
         rating=product_info["rating"],
         availability=product_info["availability"] 
     )
-    print(prompt)
     return prompt
 
-get_LLM_response()
+get_scripts_from_LLM()
 
    
