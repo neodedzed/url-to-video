@@ -30,7 +30,7 @@ This is a fullstack web application with a **FastAPI** backend and a **React** f
 4. **Run the FastAPI server:**
 
     ```bash
-    uvicorn main:app --reload
+    uvicorn main:backend --reload
     ```
 
     > Make sure your `main.py` is the entry file and contains the FastAPI app instance as `app`.
