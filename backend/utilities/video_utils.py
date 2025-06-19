@@ -1,22 +1,20 @@
 from moviepy import AudioFileClip, ImageClip, concatenate_videoclips
 from pathlib import Path
 
-def create_clips(
-        product='HP_OmniBook_X_Laptop_Snapdragon_X_Elite_X1E_78_100_20250619_102246',
-        audio_clip: AudioFileClip = None
-        ):
-    images = list(Path(f'../scraped_products/{product}/images/').iterdir())
+def create_video(product_folder, audio_clip: AudioFileClip = None):
+    images = list(Path(f'./{product_folder}/images/').iterdir())
     
     duration = 3
     if audio_clip:
         duration = audio_clip.duration / len(images)
 
-    print(images)
-    clips = [ken_burns_effect(img,1.1, duration) for img in images]
+    print(images, duration)
+    # clips = [ken_burns_effect(img,1.1, duration) for img in images]
+    clips = [ImageClip(img).with_duration(duration) for img in images]
 
     video = concatenate_videoclips(clips, method='compose')
 
-    video.write_videofile(f'../scraped_products/{product}/output.mp4', fps=30)
+    video.write_videofile(f'./{product_folder}/output.mp4', fps=30)
 
 def ken_burns_effect(image, zooom=1.1, duration=3):
     clip = ImageClip(image)
