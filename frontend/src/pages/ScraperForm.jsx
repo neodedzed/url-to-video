@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { scrapeUrl } from "./api/scraperApi"
+import { scrapeUrl } from "../api/scraperApi"
 
 function ScraperForm() {
     let [urlToBeScraped, setUrlToBeScraped] = useState('') 
