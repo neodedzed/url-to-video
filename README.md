@@ -1,4 +1,3 @@
-```markdown
 # Amazon Scraper 
 
 This is a fullstack web application with a **FastAPI** backend and a **React** frontend.
