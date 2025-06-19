@@ -1,10 +1,19 @@
 import { useState } from "react"
+import { scrapeUrl } from "./api/scraperApi"
 
 function ScraperForm() {
     let [urlToBeScraped, setUrlToBeScraped] = useState('') 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(urlToBeScraped)
+
+        //Send URL to backend for scraping
+        scrapeUrl({url: urlToBeScraped})
+        .then((res)=>
+            console.log(res.data)
+        )
+        .catch((error)=>
+            console.error('Cannot Scrape', error)
+        )
     }
 
     
